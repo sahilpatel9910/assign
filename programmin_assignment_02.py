@@ -13,5 +13,7 @@ c1=course("sail",2.3)
 
 c1.display()
 
+print("hello world")
+
 
 
