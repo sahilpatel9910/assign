@@ -17,3 +17,15 @@ print("hello world")
 
 
 
+
+class Customer:
+    def __init__(self,ID,name,rewards):
+        self.ID=ID
+        self.name=name
+        self.rewards=rewards
+
+    def display(self):
+        print(self.ID,self.name,self.rewards)
+
+c1=Customer(100,"sahil",66)
+c1.display()
