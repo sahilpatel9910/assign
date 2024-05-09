@@ -29,3 +29,6 @@ class Customer:
 
 c1=Customer(100,"sahil",66)
 c1.display()
+
+
+print("hell woeld")
