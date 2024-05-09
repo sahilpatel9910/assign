@@ -23,12 +23,22 @@ class Customer:
         self.ID=ID
         self.name=name
         self.rewards=rewards
+        
+    def get_reward(self):
+        pass
+    
+    def get_discount(self):
+        pass
+    
+    def update_reward(self):
+        pass
+    
+    def display_info(self):
+        pass
+    
+    
+    
 
-    def display(self):
-        print(self.ID,self.name,self.rewards)
-
-c1=Customer(100,"sahil",66)
-c1.display()
-
-
-print("hell woeld")
+# class BasicCustomer:
+    
+    
