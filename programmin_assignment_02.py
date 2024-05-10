@@ -25,5 +25,7 @@ class BasicCustomer(Customer):
      def __init__(self,ID,name):
          self.reward_rate=reward_rate
 
+
+
     
     
