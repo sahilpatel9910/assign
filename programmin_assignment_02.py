@@ -17,9 +17,13 @@ class Customer:
     def display_info(self):
         pass
     
-    
-    
 
-# class BasicCustomer:
+
+class BasicCustomer(Customer):
+     reward_rate=100
+
+     def __init__(self,ID,name):
+         self.reward_rate=reward_rate
+
     
     
