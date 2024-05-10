@@ -20,11 +20,27 @@ class Customer:
 
 
 class BasicCustomer(Customer):
-     reward_rate=100
+     reward_rate=1.0
 
      def __init__(self,ID,name):
-         self.reward_rate=reward_rate
+         super().__init__(ID, name ,0)
 
+     def get_reward(self, total_cost):
+         return round(total_cost * self.reward_rate)
+     
+     def update_reward(self,value):
+        self.rewards+=value
+
+     def display_info(self):
+         print(f"ID:{self.ID}, Name: {self.name}, rewards: {self.rewards}")
+
+     def set_reward_rate(reward_rate):
+         BasicCustomer.reward_rate = reward_rate
+
+    
+         
+    
+         
 
 
     
