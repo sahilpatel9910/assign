@@ -1,9 +1,9 @@
 
 class Customer:
-    def __init__(self,ID,name,rewards):
+    def __init__(self,ID,name,reward):
         self.ID=ID
         self.name=name
-        self.rewards=rewards
+        self.reward=reward
         
     def get_reward(self):
         pass
@@ -29,13 +29,35 @@ class BasicCustomer(Customer):
          return round(total_cost * self.reward_rate)
      
      def update_reward(self,value):
-        self.rewards+=value
+        self.reward+=value
 
      def display_info(self):
-         print(f"ID:{self.ID}, Name: {self.name}, rewards: {self.rewards}")
+         print(f"ID:{self.ID}, Name: {self.name}, rewards: {self.reward}")
 
+     @staticmethod
      def set_reward_rate(reward_rate):
          BasicCustomer.reward_rate = reward_rate
+
+
+class VIPCustomer(Customer):
+    reward_rate=100
+    discount_rate=0.08
+
+    def get_discount(self,total_cost):
+        total_cost=total_cost * self.discount_rate
+        return total_cost
+    
+    def get_reward(self,total_cost):
+        discount=self.get_discount(total_cost)
+        total_cost= total_cost-discount
+        reward= round(total_cost+self.reward_rate )
+        return reward
+    
+    def update_reward(self,value):
+        self.reward+= value
+
+    
+
 
     
          
