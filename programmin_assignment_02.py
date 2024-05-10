@@ -55,6 +55,16 @@ class VIPCustomer(Customer):
     
     def update_reward(self,value):
         self.reward+= value
+    
+    def display_info(self):
+        print(f"ID: {self.ID}, Name: {self.name}, Reward: {self.reward}, Discount Rate: {self.discount_rate}")
+
+    @staticmethod
+    def set_reward_rate(reward_rate):
+        VIPCustomer.reward_rate = reward_rate
+
+    def set_discount_rate(self, discount_rate):
+        self.discount_rate = discount_rate
 
     
 
