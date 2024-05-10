@@ -1,4 +1,7 @@
 
+from typing import Any
+
+
 class Customer:
     def __init__(self,ID,name,reward):
         self.ID=ID
@@ -65,6 +68,18 @@ class VIPCustomer(Customer):
 
     def set_discount_rate(self, discount_rate):
         self.discount_rate = discount_rate
+
+
+class Product:
+    def __init__(self,ID,name, price):
+        self.ID=ID
+        self.name=name
+        self.price=price
+    
+    def display_info(self):
+        print(f"ID: {self.ID}, Name: {self.name}, Price: ${self.price:.2f}")
+    
+    
 
     
 
