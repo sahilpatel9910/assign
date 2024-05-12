@@ -1,7 +1,4 @@
 
-from typing import Any
-
-
 class Customer:
     def __init__(self,ID,name,reward):
         self.ID=ID
@@ -20,7 +17,6 @@ class Customer:
     def display_info(self):
         pass
     
-
 
 class BasicCustomer(Customer):
      reward_rate=1.0
@@ -79,4 +75,19 @@ class Product:
     def display_info(self):
         print(f"ID: {self.ID}, Name: {self.name}, Price: ${self.price:.2f}")
 
-        
+class Order:
+    def __init__(self,customer , product, quantity):
+        self.custoer= customer
+        self.product=product
+        self.quantity=quantity
+
+        def compute_cost(self):
+            if isinstance(self.customer,VIPCustomer ):
+                original_cost = self.product.price * self.quantity
+                discount = original_cost * self.customer.discount_rate
+                final_cost = original_cost - discount
+                reward = original_cost * self.customer.reward_rate
+                return original_cost, discount, final_cost, reward
+            else:
+                original_cost = self.product.price * self.quantity
+                return original_cost, 0, original_cost, 0  
