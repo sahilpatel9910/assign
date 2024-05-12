@@ -78,17 +78,5 @@ class Product:
     
     def display_info(self):
         print(f"ID: {self.ID}, Name: {self.name}, Price: ${self.price:.2f}")
-    
-    
 
-    
-
-
-    
-         
-    
-         
-
-
-    
-    
+        
